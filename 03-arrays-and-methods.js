@@ -99,7 +99,7 @@ function getProductsByCategory(products, category) {
         ./* YOUR CODE HERE */((a, b) => /* YOUR CODE HERE */); // sort by price ascending
 }
 
-// =================== TEST YOUR CODE ===================
+// =================== TEST CODE ===================
 
 console.log('=== ASSIGNMENT 3 RESULTS ===');
 console.log('Product names:', productNames);
