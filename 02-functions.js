@@ -128,3 +128,84 @@ Math operations:
 Double 5: 10
 Triple 4: 12
 */
+
+
+/*
+===========================================
+ASSIGNMENT 2: FUNCTIONS
+===========================================
+*/
+
+// =================== YOUR CODE STARTS HERE ===================
+
+// TODO 1: Create a function declaration that calculates rectangle area
+function calculateRectangleArea(length, width) {
+    return length * width;
+}
+
+// TODO 2: Create an arrow function that calculates circle area
+const calculateCircleArea = (radius) => {
+    return PI * radius * radius;  // Using formula: π * radius²
+};
+
+// TODO 3: Create a function with default parameters for creating a user profile
+function createUserProfile(name, age = 18, country = "USA") {
+    return {
+        name: name,
+        age: age,
+        country: country,
+        id: Math.floor(Math.random() * 1000)
+    };
+}
+
+// TODO 4: Create a function that uses rest parameters to sum multiple numbers
+function sumNumbers(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+
+// TODO 5: Create a higher-order function that applies an operation to two numbers
+function mathOperation(a, b, operation) {
+    return operation(a, b);
+}
+
+// TODO 6: Create arrow functions for basic math operations
+const multiply = (x, y) => x * y;
+const divide = (x, y) => x / y;
+const subtract = (x, y) => x - y;
+
+// TODO 7: Create a function that returns another function (closure example)
+function createMultiplier(factor) {
+    return function(number) {
+        return number * factor;
+    };
+}
+
+// =================== TEST YOUR CODE ===================
+
+console.log('=== ASSIGNMENT 2 RESULTS ===');
+
+// Test basic functions
+console.log('Rectangle area (5x10):', calculateRectangleArea(5, 10));
+console.log('Circle area (radius 3):', calculateCircleArea(3));
+
+// Test default parameters
+console.log('User profile 1:', createUserProfile('Alice'));
+console.log('User profile 2:', createUserProfile('Bob', 30));
+console.log('User profile 3:', createUserProfile('Charlie', 25, 'Canada'));
+
+// Test rest parameters
+console.log('Sum of 1,2,3,4,5:', sumNumbers(1, 2, 3, 4, 5));
+console.log('Sum of 10,20,30:', sumNumbers(10, 20, 30));
+
+// Test higher-order functions
+console.log('Math operations:');
+console.log('  5 * 3 =', mathOperation(5, 3, multiply));
+console.log('  15 / 3 =', mathOperation(15, 3, divide));
+console.log('  10 - 4 =', mathOperation(10, 4, subtract));
+
+// Test closure
+const double = createMultiplier(2);
+const triple = createMultiplier(3);
+console.log('Double 5:', double(5));
+console.log('Triple 4:', triple(4));
+
