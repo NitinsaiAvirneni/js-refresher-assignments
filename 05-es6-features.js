@@ -1,4 +1,4 @@
-// =================== YOUR CODE STARTS HERE ===================
+// ===================  ===================
 
 // TODO 1: Use const and let appropriately
 const PI = 3.14159;      // This should never change
