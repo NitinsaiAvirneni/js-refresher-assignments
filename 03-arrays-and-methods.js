@@ -141,3 +141,89 @@ Other products count: 3
 All numbers combined: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 Electronics sorted by price: [...] (sorted by price)
 */
+
+/*
+===========================================
+ASSIGNMENT 3: ARRAYS AND ARRAY METHODS
+===========================================
+*/
+
+// Sample data for testing
+const products = [
+    { id: 1, name: 'Laptop', price: 999, category: 'Electronics', inStock: true },
+    { id: 2, name: 'Phone', price: 699, category: 'Electronics', inStock: false },
+    { id: 3, name: 'Tablet', price: 299, category: 'Electronics', inStock: true },
+    { id: 4, name: 'Chair', price: 149, category: 'Furniture', inStock: true },
+    { id: 5, name: 'Desk', price: 299, category: 'Furniture', inStock: false }
+];
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// TODO 1: Use map to create an array of product names
+const productNames = products.map(product => product.name);
+
+// TODO 2: Use filter to get products that are in stock
+const inStockProducts = products.filter(product => product.inStock);
+
+// TODO 3: Use filter to get products under $500
+const affordableProducts = products.filter(product => product.price < 500);
+
+// TODO 4: Use reduce to calculate total value of all products
+const totalValue = products.reduce((total, product) => total + product.price, 0);
+
+// TODO 5: Use find to get the first Electronics product
+const firstElectronics = products.find(product => product.category === 'Electronics');
+
+// TODO 6: Use some to check if any product costs more than $800
+const hasExpensiveProduct = products.some(product => product.price > 800);
+
+// TODO 7: Use every to check if all products have prices above $100
+const allExpensive = products.every(product => product.price > 100);
+
+// TODO 8: Use map to create an array of numbers squared
+const squaredNumbers = numbers.map(num => num * num);
+
+// TODO 9: Chain methods - get even numbers, double them, then sum
+const evenDoubledSum = numbers
+    .filter(num => num % 2 === 0)   // filter evens
+    .map(num => num * 2)            // double them
+    .reduce((sum, num) => sum + num, 0); // sum them
+
+// TODO 10: Use forEach to log each product's details
+console.log('=== PRODUCT CATALOG ===');
+products.forEach(product => {
+    console.log(`${product.name}: $${product.price} (${product.inStock ? 'In Stock' : 'Out of Stock'})`);
+});
+
+// TODO 11: Use array destructuring
+const [firstProduct, secondProduct, ...otherProducts] = products;
+
+// TODO 12: Use spread operator to combine arrays
+const moreNumbers = [11, 12, 13];
+const allNumbers = [...numbers, ...moreNumbers];
+
+// TODO 13: Create a function that filters and sorts products
+function getProductsByCategory(products, category) {
+    return products
+        .filter(product => product.category === category)
+        .sort((a, b) => a.price - b.price); // sort by price ascending
+}
+
+// =================== TEST YOUR CODE ===================
+
+console.log('=== ASSIGNMENT 3 RESULTS ===');
+console.log('Product names:', productNames);
+console.log('In stock products:', inStockProducts.length, 'items');
+console.log('Affordable products (<$500):', affordableProducts.length, 'items');
+console.log('Total value of all products: $', totalValue);
+console.log('First electronics product:', firstElectronics?.name);
+console.log('Has expensive product (>$800):', hasExpensiveProduct);
+console.log('All products >$100:', allExpensive);
+console.log('Squared numbers:', squaredNumbers);
+console.log('Even numbers doubled and summed:', evenDoubledSum);
+console.log('First product:', firstProduct.name);
+console.log('Second product:', secondProduct.name);
+console.log('Other products count:', otherProducts.length);
+console.log('All numbers combined:', allNumbers);
+console.log('Electronics sorted by price:', getProductsByCategory(products, 'Electronics'));
+
