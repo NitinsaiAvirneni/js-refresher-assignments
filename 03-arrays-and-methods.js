@@ -209,7 +209,7 @@ function getProductsByCategory(products, category) {
         .sort((a, b) => a.price - b.price); // sort by price ascending
 }
 
-// =================== TEST YOUR CODE ===================
+// ======================================
 
 console.log('=== ASSIGNMENT 3 RESULTS ===');
 console.log('Product names:', productNames);
