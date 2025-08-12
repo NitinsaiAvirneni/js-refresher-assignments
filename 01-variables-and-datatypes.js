@@ -30,7 +30,7 @@ console.log(typeof userName);   // "string"
 console.log(typeof PI);         // "number"
 */
 
-// =================== YOUR CODE STARTS HERE ===================
+// =================== ===================
 
 // TODO 1: Declare a variable using 'let' with your name
 let myName = /* YOUR CODE HERE */;
