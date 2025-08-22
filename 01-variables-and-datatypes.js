@@ -97,7 +97,6 @@ ASSIGNMENT 1: VARIABLES AND DATA TYPES
 - Practice type checking with typeof
 */
 
-// =================== YOUR CODE STARTS HERE ===================
 
 // TODO 1: Declare a variable using 'let' with your name
 let myName = "Nitin Sai";
@@ -124,9 +123,6 @@ console.log('Type of age:', typeof age);
 console.log('Type of isStudent:', typeof isStudent);
 console.log('Type of favoriteColors:', typeof favoriteColors);
 console.log('Type of person:', typeof person);
-
-// =================== TEST YOUR CODE ===================
-// Run this in your browser console and verify the outputs
 
 console.log('=== ASSIGNMENT 1 RESULTS ===');
 console.log('Name:', myName);
