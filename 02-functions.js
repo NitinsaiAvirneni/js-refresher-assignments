@@ -82,7 +82,7 @@ function createMultiplier(factor) {
     };
 }
 
-// =================== TEST YOUR CODE ===================
+// ===================CODE ===================
 
 console.log('=== ASSIGNMENT 2 RESULTS ===');
 
@@ -136,7 +136,6 @@ ASSIGNMENT 2: FUNCTIONS
 ===========================================
 */
 
-// =================== YOUR CODE STARTS HERE ===================
 
 // TODO 1: Create a function declaration that calculates rectangle area
 function calculateRectangleArea(length, width) {
@@ -180,7 +179,7 @@ function createMultiplier(factor) {
     };
 }
 
-// =================== TEST YOUR CODE ===================
+// =================== CODE ===================
 
 console.log('=== ASSIGNMENT 2 RESULTS ===');
 
